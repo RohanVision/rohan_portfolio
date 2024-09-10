@@ -4,16 +4,15 @@
 
 /*========== VARIABLE CSS =============== */
 :root {
-
   --header-height: 3rem;
   /* ======== Colors ======== */
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
-  --title-color: hs1(var(-- hue), var(-- sat), 20%);
-  --title-color-dark: hs1(var(-- hue), var(-- sat), 0%);
-  --text-color: hs1(var(-- hue), var(-- sat), 46%);
-  --body-color: hs1(var(-- hue), var(-- sat), 98%);
+  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
 
   /* Font and typography  */
@@ -150,7 +149,7 @@ img {
 
 .grid {
   display: grid;
-  grid: 1.5rem;
+  gap: 1.5rem;
 }
 
 /* BUTTONS */
@@ -168,11 +167,51 @@ img {
   background-color: var(--title-color-dark);
 }
 
-.button_icon {
+.button__icon {
   margin-left: var(--mb-0-5);
 }
 
-.button_flex {
+.button--flex {
   display: inline-flex;
   align-items: center;
+}
+
+
+/*============= BREAKPOINTS =================*/
+/* Large Devices */
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Medium Devices */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 0 4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {}
+
+/* Small Devices */
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
 }
