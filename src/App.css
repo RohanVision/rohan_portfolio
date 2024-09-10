@@ -124,19 +124,19 @@ img {
   padding: 6rem 0 2rem;
 }
 
-.section_title {
+.section__title {
   font-size: var(--h1-font-size);
   color: var(--title-color);
 }
 
-.section_subtitle {
+.section__subtitle {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
 }
 
-.section_title,
-.section_subtitle {
+.section__title,
+.section__subtitle {
   text-align: center;
 }
 
@@ -197,8 +197,16 @@ img {
 
 /* Medium Devices */
 @media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height) 0;
+  }
+
   .section {
     padding: 2rem 0 4rem;
+  }
+
+  .section_subtitle {
+    margin-bottom: var(--mb-3);
   }
 }
 
