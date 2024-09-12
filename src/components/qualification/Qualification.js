@@ -5,10 +5,10 @@ import "./qualification.css";
 const Qualification = () => {
     const [toggleState, setToggleState] = useState(1);
     const toggleTab = (index) => {
-        setToggleState(index)
+        setToggleState(index);
     }
     return (
-        <section className="qualification section">
+        <section className="qualification section" id='qulification'>
             <h2 className="section__title">Qualification</h2>
             <span className="section__subtitle">My Personal Journey</span>
 
