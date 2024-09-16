@@ -1,16 +1,17 @@
 import React from 'react'
+import { TypeAnimation } from 'react-type-animation';
 
 const Data = () => {
     return (
         <div className="home__data">
-            <h1 className="home__title">Rohan
+            <h1 className="home__title">Rohan Amberkar
                 <svg
                     width="36"
                     height="36"
                     viewBox="0 0 48 48"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="home__hand"
+                    className="home__hand waving-hand"
                 >
                     <path
                         d="M25.4995 32.0305L31.3495 33.1555L36.1495 8.48051C36.4495 6.83051 35.3995 5.18051 33.8245 4.88051C32.1745 4.58051 30.5995 5.70551 30.2995 7.35551L25.4995 32.0305Z"
@@ -54,8 +55,29 @@ const Data = () => {
                     ></path>
                 </svg>
             </h1>
-            <h3 className="home__subtitle">Front-End Developer</h3>
-            <p className="home__description">I am fron-end developer.</p>
+            <h3 className="home__subtitle">
+                <TypeAnimation
+                    sequence={[
+                        // Same substring at the start will only be typed out once, initially
+                        "I'm a Front-End Developer",
+                        1000, // wait 1s before replacing "Mice" with "Hamsters"
+                        "I'm a React Developer",
+                        1000,
+                        "I'm a Traveller",
+                        1000,
+                        "I'm a Gamer",
+                        1000,
+                        "I'm a Foodie",
+                        1000,
+                    ]}
+                    wrapper="span"
+                    speed={40}
+                    style={{ fontSize: '1em', display: 'inline-block' }}
+                    repeat={Infinity}
+                />
+            </h3>
+
+            <p className="home__description">I am front-End developer based in Canada. I am very passionate and dedicated to my work.</p>
             <a href="#connect" className="button button--flex">
                 Say Hello
                 <svg
