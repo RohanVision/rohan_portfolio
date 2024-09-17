@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { projecstData } from './Data'
-import { projectsNav } from './Data'
+import { projectsNav } from './Data';
+import { projectsData } from './Data';
 import WorksItem from './WorksItem';
 
 const Works = () => {
@@ -10,9 +10,9 @@ const Works = () => {
 
     useEffect(() => {
         if (item.name === "all") {
-            setProjects(projecstData);
+            setProjects(projectsData);
         } else {
-            const newProjects = projecstData.filter((project) => {
+            const newProjects = projectsData.filter((project) => {
                 return project.category.toLowerCase() === item.name;
             });
             setProjects(newProjects)
@@ -30,7 +30,9 @@ const Works = () => {
                     // Dont use index as a key
                     return <span onClick={(e) => {
                         handleClick(e, index)
-                    }} className={`${active === index ? "active-work" : ""} work__item`} key={index}>{item.name}</span>
+                    }} key={index} className={`${active === index ? "active-work" : ""} work__item`}>
+                        {item.name}
+                    </span>
                 })}
             </div>
 

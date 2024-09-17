@@ -1,54 +1,49 @@
-import Work1 from '../../assets/work1.jpg';
-import Work2 from '../../assets/work2.jpg';
-import Work3 from '../../assets/work3.jpg';
+import Work1 from '../../assets/fast_food.jpg';
+import Work2 from '../../assets/netflixGpt.jpg';
+import Work3 from '../../assets/forkiFy.jpg';
 import Work4 from '../../assets/work4.jpg';
-import Work5 from '../../assets/work5.jpg';
-
-export const projecstData = [
-    {
-        id: 1,
-        image: Work1,
-        title: 'Web Design',
-        category: 'all',
-    },
-    {
-        id: 2,
-        image: Work2,
-        title: 'Web Design',
-        category: 'app',
-    },
-    {
-        id: 3,
-        image: Work3,
-        title: 'Web Design',
-        category: 'app',
-    },
-    {
-        id: 4,
-        image: Work4,
-        title: 'Web Design',
-        category: 'app',
-    },
-    {
-        id: 5,
-        image: Work5,
-        title: 'Web Design',
-        category: 'web',
-    },
-];
-
 
 export const projectsNav = [
     {
         name: 'all',
     },
     {
-        name: 'web',
+        name: 'React',
     },
     {
-        name: 'app',
-    },
-    {
-        name: 'design',
+        name: 'JavaScript',
     },
 ]
+
+export const projectsData = [
+    {
+        id: 1,
+        image: Work1,
+        title: 'Fast Food App',
+        demoUrl: "https://fast-foods-delivery.netlify.app/",
+        gitUrl: "https://github.com/RohanVision/Namste-Rohan",
+        category: 'React',
+    },
+    {
+        id: 2,
+        image: Work2,
+        title: 'NetflixGPT',
+        demoUrl: "https://netflisx-gpt.netlify.app/",
+        gitUrl: "https://github.com/RohanVision/netflix-gpt",
+        category: 'React',
+    },
+    {
+        id: 3,
+        image: Work3,
+        title: 'Forkify Food App',
+        demoUrl: "https://rohan-forkifyapp.netlify.app/",
+        gitUrl: "https://github.com/RohanVision/forkifyApp-rohan",
+        category: 'Javascript',
+    },
+    {
+        id: 4,
+        image: Work4,
+        title: 'Great Homes',
+        category: 'app',
+    },
+];
