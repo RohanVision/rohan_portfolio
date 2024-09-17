@@ -4,23 +4,23 @@ import { projectsData } from './Data';
 import WorksItem from './WorksItem';
 
 const Works = () => {
-    const [item, setItem] = useState({ name: "all" });
+    const [filterNav, setFilterNav] = useState({ name: "all" });
     const [projects, setProjects] = useState([]);
     const [active, setActive] = useState(0);
 
     useEffect(() => {
-        if (item.name === "all") {
+        if (filterNav.name === "all") {
             setProjects(projectsData);
         } else {
             const newProjects = projectsData.filter((project) => {
-                return project.category.toLowerCase() === item.name;
+                return project.category.toLowerCase() === filterNav.name;
             });
             setProjects(newProjects)
         }
-    }, [item]);
+    }, [filterNav]);
 
     const handleClick = (e, index) => {
-        setItem({ name: e.target.textContent.toLowerCase() });
+        setFilterNav({ name: e.target.textContent.toLowerCase() });
         setActive(index);
     }
     return (
@@ -37,8 +37,8 @@ const Works = () => {
             </div>
 
             <div className="work__container container grid">
-                {projects.map((item) => {
-                    return <WorksItem item={item} key={item.id} />
+                {projects.map((project) => {
+                    return <WorksItem project={project} key={project.id} />
                 })}
             </div>
         </div>
